@@ -9,7 +9,7 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="BANDSITE">
             <use fill="#000000" xlink:href="#path-1"></use>
-            <use fill="#FFFFFF" xlink:href="#path-1"></use>
+            <use fill="#000000" xlink:href="#path-1"></use>
         </g>
     </g>
 </svg>
