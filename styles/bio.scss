@@ -201,6 +201,101 @@ p {
   }
 }
 
+.conversation-title {
+  padding: 1rem;
+  color: #323232;
+  @include tablet {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+
+  @include tablet {
+    padding: 2rem 10rem;
+  }
+
+  &__left {
+    height: 100%;
+    width: 20%;
+  }
+}
+.picture-box {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+  &__label-name {
+    color: #e1e1e1;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  &__name-input {
+    border-radius: 10px;
+    border: solid 1px #e1e1e1;
+    background-color: #fafafa;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-family: cursive;
+  }
+  &__comment-label {
+    color: #e1e1e1;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  &__comment-textarea {
+    background-color: #fafafa;
+    padding: 1rem;
+    border-radius: 10px;
+    border: solid 1px #e1e1e1;
+    font-family: cursive;
+    margin-bottom: 1rem;
+  }
+
+  &__box-button {
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &__buttonSubmit {
+    background-color: #323232;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
+      transition: 1s ease;
+      background-color: black;
+    }
+    @include tablet {
+      width: 10rem;
+    }
+  }
+}
+.picture-box {
+  &__avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 30px;
+  }
+}
+
 .footer {
   background-color: #e1e1e1;
   color: black;
@@ -277,4 +372,72 @@ p {
     display: flex;
     justify-content: center;
   }
+}
+
+.decoration {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.comments-wrap {
+}
+.comment-box {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+
+  @include tablet {
+    margin: 2rem 10rem;
+    padding: 2rem 0;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+  }
+
+  &__avatar {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 30px;
+    background-color: #e1e1e1;
+  }
+}
+
+.realComment {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+  &__up-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  &__down {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  &__para {
+    padding: 0;
+  }
+}
+
+#nametitle {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+#timestamp {
+  color: #e1e1e1;
+  font-size: 0.8rem;
+}
+
+.commentsList {
+  padding: 0;
 }

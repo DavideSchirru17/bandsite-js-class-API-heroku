@@ -128,7 +128,59 @@
         </li>
       </ul>
     </section>
-    <section class="comments"></section>
+    <h1 class="conversation-title">Join the Conversation</h1>
+    <section class="form-container">
+      <div class="form-container__left">
+        <div class="picture-box">
+          <img
+            class="picture-box__avatar"
+            src="./assets/Images/Mohan-muruge.jpg"
+            alt="avatar" />
+        </div>
+      </div>
+      <!-- action="https://postman-echo.com/post" -->
+      <form class="form" method="post">
+        <label class="form__label-name" for="nameTitle">NAME</label>
+        <input
+          class="form__name-input"
+          type="text"
+          name="nameTitle"
+          id="nameTitle"
+          placeholder="Enter your name" />
+        <label class="form__comment-label" for="textarea">COMMENT</label>
+        <textarea
+          class="form__comment-textarea"
+          name="textarea"
+          id="comment"
+          placeholder="Add a new comment"></textarea>
+        <div class="form__box-button">
+          <!-- type submit button -->
+          <button type="submit" class="form__buttonSubmit">COMMENT</button>
+        </div>
+      </form>
+    </section>
+    <section class="comments-wrap">
+      <div class="comment-box">
+        <div class="comment-box__left">
+          <div class="comment-box__avatar"></div>
+        </div>
+        <div class="realComment">
+          <div class="realComment__up-box">
+            <div id="nametitle">Connor Walton</div>
+            <div id="timestamp">25/07/2024</div>
+          </div>
+          <div class="realComment__down">
+            <p class="realComment__para">
+              This is art. This is inexplicable magic expressed in the purest
+              way, everything that makes up this majestic work deserves
+              reverence. Let us appreciate this for what it is and what it
+              contains.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <ul class="commentsList"></ul>
     <footer class="footer">
       <div class="footer__contacts-box">
         <h1>Get in Touch</h1>
@@ -160,13 +212,18 @@
         </div>
       </div>
       <div class="section-info">
-        <a href="https://www.oomen-webservices.com/" target="_blank">
+        <a
+          class="decoration"
+          href="https://www.oomen-webservices.com/"
+          target="_blank">
           <p class="section-info__paragraph">Oomen-webservices.com</p></a
         >
         <p class="section-info__paragraph">London City</p>
 
         <p class="section-info__paragraph">
-          <a href="mailto:schirrudavide@icloud.com">schirrudavide@icloud.com</a>
+          <a class="decoration" href="mailto:schirrudavide@icloud.com"
+            >schirrudavide@icloud.com</a
+          >
         </p>
       </div>
       <p class="Copyright">
