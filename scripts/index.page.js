@@ -25,7 +25,7 @@ showsStyle.addEventListener("mouseout", () => {
 // prendo il form object
 const form = document.querySelector(".form");
 // prendo sezione lista ul
-const commentsList = document.querySelector(".commentsList");
+const commentsList = document.querySelector(".commentsListForm");
 
 // creo un array dove andro a inserire i dati digitali
 
