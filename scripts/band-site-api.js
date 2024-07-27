@@ -8,16 +8,16 @@
 
 // funzione axios fetching datas
 
-const url = "https://project-1-api.herokuapp.com/comments";
-const api = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
+const baseUrl = "https://project-1-api.herokuapp.com/comments";
+const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
+const urlShowBase = "https://project-1-api.herokuapp.com/showdates";
 
 const commentBtn = document.querySelector(".form__buttonSubmit");
 const ulSection = document.querySelector(".commentsList");
 
 const fetchingData = async () => {
   try {
-    const response = await axios.get(`${url}/?api_key=${api}`);
-    console.log(response.data);
+    const response = await axios.get(`${baseUrl}/?api_key=${apiKey}`);
     renderCommentsFromHeroku(response.data);
   } catch (error) {
     console.error("error fetching comments", errror);
@@ -90,8 +90,71 @@ function renderCommentsFromHeroku(comments) {
 }
 
 // Fetch data initially
-
 fetchingData();
 
 // Add event listener to button to fetch and render comments on click
 commentBtn.addEventListener("click", fetchingData);
+
+// BANDSITEAPI CLASS ---------------------------
+// ---------------------------
+// ---------------------------
+
+class BandSiteApi {
+  // Constructor accepts an API key and sets the base URL
+  constructor(apiKey, baseUrl) {
+    this.apiKey = apiKey;
+    this.baseUrl = baseUrl;
+  }
+
+  // Method to post a comment
+  async postComment(comment) {
+    try {
+      // Sending POST request with comment object and API key
+      const response = await axios.post(
+        `${this.baseUrl}?api_key=${this.apiKey}`,
+        comment
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error posting comment", error);
+    }
+  }
+
+  // Method to get comments
+  async getComments() {
+    try {
+      // Sending GET request to fetch comments
+      const response = await axios.get(
+        `${this.baseUrl}?api_key=${this.apiKey}`
+      );
+      // Sorting comments from newest to oldest
+      const sortedComments = response.data.sort(
+        (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+      );
+      return sortedComments;
+    } catch (error) {
+      console.error("Error fetching comments", error);
+    }
+  }
+  // Method to get shows
+  async getShows() {
+    try {
+      // Sending GET request to fetch shows
+      const response = await axios.get(
+        `${urlShowBase}?api_key=${this.apiKey}` // Using the provided urlShowBase variable
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching shows", error);
+    }
+  }
+}
+
+// Creating an instance of BandSiteApi
+const instanceBandSiteApi = new BandSiteApi(apiKey);
+
+// Example usage
+(async () => {
+  const shows = await instanceBandSiteApi.getShows();
+  console.log(shows);
+})();
