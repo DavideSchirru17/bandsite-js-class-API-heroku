@@ -20,7 +20,7 @@ const fetchingData = async () => {
     const response = await axios.get(`${baseUrl}/?api_key=${apiKey}`);
     renderCommentsFromHeroku(response.data);
   } catch (error) {
-    console.error("error fetching comments", errror);
+    console.error("error fetching comments", error);
   }
 };
 
