@@ -1,0 +1,199 @@
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/resets" as *;
+
+.header {
+  background-color: #323232;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  // background-color: red;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    @include tablet {
+      padding: 2rem;
+    }
+  }
+  &__logo-img {
+  }
+}
+.box-pageLinks {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  cursor: pointer;
+  transition: 1s ease-in;
+  @include tablet {
+    width: 30%;
+  }
+
+  &__bio {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  &__shows {
+    width: 50%;
+    display: flex;
+    border-radius: 20px;
+    border: solid 3px white;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+}
+
+.hero-shows {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: flex-start;
+  // height: 50vh;
+  background-image: url("../assets/Images/hero-shows.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  line-height: 2rem;
+
+  @include tablet {
+    padding: 2rem;
+  }
+  @include desktop {
+    height: 50vh;
+    padding: 4rem;
+  }
+
+  &__album-name {
+    @include desktop {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.heroFlex {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    width: 70%;
+  }
+  @include desktop {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    @include tablet {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+    @include desktop {
+      width: 100%;
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  }
+
+  &__iframe {
+    @include desktop {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
+
+.footer {
+  background-color: #e1e1e1;
+  color: black;
+  padding: 1rem;
+
+  @include tablet {
+    padding: 2rem;
+  }
+  @include desktop {
+    padding: 3rem;
+  }
+
+  &__contacts-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-bottom: 2rem;
+    }
+    @include desktop {
+      margin-bottom: 4rem;
+    }
+  }
+  &__logo {
+    display: none;
+    @include tablet {
+      display: block;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+  }
+
+  &__iconLink {
+    transition: ease-out 1s;
+    filter: grayscale(1);
+
+    &:hover {
+      filter: none;
+      cursor: pointer;
+      transform: scale(1.2);
+      box-shadow: 0 0 8px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff; // Glowing effect
+    }
+  }
+}
+.section-info {
+  border: solid 2px black;
+  border-radius: 11px;
+  padding: 1rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 10rem;
+  }
+
+  &__paragraph {
+    color: black;
+    font-weight: 600;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.Copyright {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
+}
+.decoration {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

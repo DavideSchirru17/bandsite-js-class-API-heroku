@@ -20,7 +20,7 @@ const fetchingData = async () => {
     const response = await axios.get(`${baseUrl}/?api_key=${apiKey}`);
     renderCommentsFromHeroku(response.data);
   } catch (error) {
-    console.error("error fetching comments", errror);
+    console.error("error fetching comments", error);
   }
 };
 
@@ -124,9 +124,7 @@ class BandSiteApi {
   async getComments() {
     try {
       // Sending GET request to fetch comments
-      const response = await axios.get(
-        `${this.baseUrl}?api_key=${this.apiKey}`
-      );
+      const response = await axios.get(`${baseUrl}?api_key=${this.apiKey}`);
       // Sorting comments from newest to oldest
       const sortedComments = response.data.sort(
         (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
@@ -153,8 +151,12 @@ class BandSiteApi {
 // Creating an instance of BandSiteApi
 const instanceBandSiteApi = new BandSiteApi(apiKey);
 
-// Example usage
+// Example usage SHOWS PAGE
 (async () => {
   const shows = await instanceBandSiteApi.getShows();
-  console.log(shows);
+  const commentsTry = await instanceBandSiteApi.getComments();
+  const postcommentstry = await instanceBandSiteApi.postComment();
+  console.log("fetch comments bio page ", commentsTry);
+  console.log("get show  ", shows);
+  // console.log(shows);
 })();

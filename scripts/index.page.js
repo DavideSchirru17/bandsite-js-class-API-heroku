@@ -7,9 +7,9 @@
 const styleBiography = document.querySelector(".box-pageLinks__bio");
 const showsStyle = document.querySelector(".box-pageLinks__shows");
 
-styleBiography.addEventListener("mouseover", () => {
-  styleBiography.style.border = " solid white";
-});
+// styleBiography.addEventListener("mouseover", () => {
+//   styleBiography.style.border = " solid white";
+// });
 
 showsStyle.addEventListener("mouseover", () => {
   showsStyle.style.border = "solid white";
