@@ -1,1 +1,225 @@
-/*# sourceMappingURL=shows.css.map */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "PlayfairDisplay", sans-serif;
+  min-width: 320px;
+}
+
+.header {
+  background-color: #323232;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding: 2rem;
+  }
+}
+.box-pageLinks {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  cursor: pointer;
+  transition: 1s ease-in;
+}
+@media screen and (min-width: 768px) {
+  .box-pageLinks {
+    width: 30%;
+  }
+}
+.box-pageLinks__bio {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+  padding: 1rem 0;
+}
+.box-pageLinks__shows {
+  width: 50%;
+  display: flex;
+  border-radius: 20px;
+  border: solid 3px white;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.hero-shows {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("../assets/Images/hero-shows.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  line-height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .hero-shows {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-shows {
+    height: 50vh;
+    padding: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-shows__album-name {
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+}
+
+.heroFlex {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .heroFlex {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heroFlex {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+.heroFlex__title {
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .heroFlex__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heroFlex__title {
+    width: 100%;
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heroFlex__iframe {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.footer {
+  background-color: #e1e1e1;
+  color: black;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 3rem;
+  }
+}
+.footer__contacts-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__contacts-box {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__contacts-box {
+    margin-bottom: 4rem;
+  }
+}
+.footer__logo {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    display: block;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+}
+.footer__iconLink {
+  transition: ease-out 1s;
+  filter: grayscale(1);
+}
+.footer__iconLink:hover {
+  filter: none;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0 0 8px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff;
+}
+
+.section-info {
+  border: solid 2px black;
+  border-radius: 11px;
+  padding: 1rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .section-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 10rem;
+  }
+}
+.section-info__paragraph {
+  color: black;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .section-info__paragraph {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Copyright {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.decoration {
+  text-decoration: none;
+}
+.decoration:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=shows.css.map */
