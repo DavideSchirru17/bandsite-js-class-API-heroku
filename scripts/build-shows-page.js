@@ -126,7 +126,7 @@ function renderShows(showsData) {
     // Create button container with button text
     const buttonTickets = document.createElement("div");
     buttonTickets.classList.add("shows__buttonTickets");
-    buttonTickets.style.backgroundColor = "black";
+    buttonTickets.style.backgroundColor = "#323232";
     buttonTickets.style.borderRadius = "5px";
     list.appendChild(buttonTickets);
 
