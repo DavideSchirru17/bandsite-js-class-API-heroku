@@ -93,70 +93,72 @@ function renderCommentsFromHeroku(comments) {
 fetchingData();
 
 // Add event listener to button to fetch and render comments on click
-commentBtn.addEventListener("click", fetchingData);
+// commentBtn.addEventListener("click", fetchingData);
 
 // BANDSITEAPI CLASS ---------------------------
 // ---------------------------
 // ---------------------------
 
-class BandSiteApi {
-  // Constructor accepts an API key and sets the base URL
-  constructor(apiKey, baseUrl) {
-    this.apiKey = apiKey;
-    this.baseUrl = baseUrl;
-  }
+// class BandSiteApi {
+//   // Constructor accepts an API key and sets the base URL
+//   constructor(apiKey, baseUrl) {
+//     this.apiKey = apiKey;
+//     this.baseUrl = baseUrl;
+//   }
 
-  // Method to post a comment
-  async postComment(comment) {
-    try {
-      // Sending POST request with comment object and API key
-      const response = await axios.post(
-        `${this.baseUrl}?api_key=${this.apiKey}`,
-        comment
-      );
-      return response.data;
-    } catch (error) {
-      console.error("Error posting comment", error);
-    }
-  }
+//   // Method to post a comment
+//   async postComment(comment) {
+//     try {
+//       // Sending POST request with comment object and API key
+//       const response = await axios.post(
+//         `${this.baseUrl}?api_key=${this.apiKey}`,
+//         comment
+//       );
+//       return response.data;
+//     } catch (error) {
+//       console.error("Error posting comment", error);
+//     }
+//   }
 
-  // Method to get comments
-  async getComments() {
-    try {
-      // Sending GET request to fetch comments
-      const response = await axios.get(`${baseUrl}?api_key=${this.apiKey}`);
-      // Sorting comments from newest to oldest
-      const sortedComments = response.data.sort(
-        (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
-      );
-      return sortedComments;
-    } catch (error) {
-      console.error("Error fetching comments", error);
-    }
-  }
-  // Method to get shows
-  async getShows() {
-    try {
-      // Sending GET request to fetch shows
-      const response = await axios.get(
-        `${urlShowBase}?api_key=${this.apiKey}` // Using the provided urlShowBase variable
-      );
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching shows", error);
-    }
-  }
-}
+//   // Method to get comments
+//   async getComments() {
+//     try {
+//       // Sending GET request to fetch comments
+//       const response = await axios.get(`${baseUrl}?api_key=${this.apiKey}`);
+//       // Sorting comments from newest to oldest
+//       const sortedComments = response.data.sort(
+//         (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+//       );
+//       return sortedComments;
+//     } catch (error) {
+//       console.error("Error fetching comments", error);
+//     }
+//   }
+//   // Method to get shows
+//   async getShows() {
+//     try {
+//       // Sending GET request to fetch shows
+//       const response = await axios.get(
+//         `${urlShowBase}?api_key=${this.apiKey}` // Using the provided urlShowBase variable
+//       );
+//       return response.data;
+//     } catch (error) {
+//       console.error("Error fetching shows", error);
+//     }
+//   }
+// }
 
-// Creating an instance of BandSiteApi
-const instanceBandSiteApi = new BandSiteApi(apiKey);
+// // Creating an instance of BandSiteApi
+// const instanceBandSiteApi = new BandSiteApi(apiKey);
 
-// Example usage SHOWS PAGE
-(async () => {
-  const shows = await instanceBandSiteApi.getShows();
-  const commentsTry = await instanceBandSiteApi.getComments();
-  const postcommentstry = await instanceBandSiteApi.postComment();
-  console.log("fetch comments bio page ", commentsTry);
-  console.log("get show  ", shows);
-  // console.log(shows);
-})();
+// // Example usage SHOWS PAGE
+// (async () => {
+//   const shows = await instanceBandSiteApi.getShows();
+//   const commentsTry = await instanceBandSiteApi.getComments();
+//   const postcommentstry = await instanceBandSiteApi.postComment();
+//   console.log("fetch comments bio page ", commentsTry);
+//   console.log("get show  ", shows);
+//   // console.log(shows);
+// })();
+
+// // 2ND PAGE SHOWS

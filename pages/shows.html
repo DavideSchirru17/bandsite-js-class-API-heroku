@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/shows.css" />
     <script src="../scripts/build-shows-page.js" defer></script>
+    <script src="../scripts/band-site-api.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -44,42 +46,18 @@
           frameborder="no"
           allow="autoplay"
           src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535872399&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-        <!-- <div
-          style="
-            font-size: 10px;
-            color: #cccccc;
-            line-break: anywhere;
-            word-break: normal;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
-              Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-            font-weight: 100;
-          "> -->
-          <!-- <a
-            href="https://soundcloud.com/momomoyouth"
-            title="MØ"
-            target="_blank"
-            style="color: #cccccc; text-decoration: none"
-            >MØ</a -->
-          <!-- > · -->
-          <!-- <a
-            href="https://soundcloud.com/momomoyouth/blur-feat-foster-the-people"
-            title="Blur (feat. Foster The People)"
-            target="_blank"
-            style="color: #cccccc; text-decoration: none"
-            >Blur (feat. Foster The People)</a -->
-          <!-- > -->
-        </div>
+        <!-- Removed commented-out div and a tags for cleaner code -->
       </div>
     </section>
     <!-- shows  -->
+    <section class="shows">
+      <h1 class="shows__title">Shows</h1>
+      <ul class="shows__list"></ul>
+    </section>
     <footer class="footer">
       <div class="footer__contacts-box">
         <h1>Get in Touch</h1>
         <div class="footer__icons-box">
-          <!-- <a target="_blank|_self|_parent|_top|framename"> -->
           <a href="https://www.linkedin.com/in/davideschirru/" target="_blank">
             <img
               class="footer__iconLink"

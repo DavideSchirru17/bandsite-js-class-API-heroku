@@ -114,6 +114,37 @@
   }
 }
 
+//  voglio qua la sezione shows
+// quale sara la classe shows?
+// ok funziona ed e associata la pagina html con css
+.shows {
+  // height: 50vh;
+  // color: black;
+  &__title {
+    padding: 1rem;
+  }
+  &__list {
+    list-style-type: none;
+    padding: 0;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 2rem;
+    max-width: 400px;
+
+    @include tablet {
+      padding: 2rem;
+      max-width: 80%;
+    }
+  }
+
+  &__buttonTickets {
+    display: flex;
+    justify-content: center;
+  }
+}
 .footer {
   background-color: #e1e1e1;
   color: black;
